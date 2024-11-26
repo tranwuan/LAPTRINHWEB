@@ -1,0 +1,228 @@
+/* Cart.css */
+
+/* Toàn bộ phần giỏ hàng */
+.cart-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Tiêu đề giỏ hàng */
+.cart-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Thông báo giỏ hàng trống */
+.empty-cart-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* Danh sách sản phẩm trong giỏ hàng */
+.cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.cart-item-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.cart-item-price,
+.cart-item-quantity {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Các nút điều khiển số lượng và xóa */
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+}
+
+.control-button {
+    background-color: #3682d3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.remove-button {
+    background-color: #c02a39;
+    color: white;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Nút thanh toán */
+.checkout-button {
+    background-color: #368ae4;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Phần thông tin thanh toán */
+.checkout-form-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.checkout-form-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 1rem;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    background-color: #368ae4;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Điều chỉnh khi form hiển thị */
+.checkout-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 100px;  /* Điều chỉnh để thông báo nằm ở phía trên */
+    right: 10px;  /* Vị trí bên phải */
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+}
+/* Container for the modal background */
+.checkout-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+/* Modal content container */
+.checkout-form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* When modal is visible */
+.checkout-modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Button to close modal */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Optional: Add styling for the submit button or other inputs */
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
